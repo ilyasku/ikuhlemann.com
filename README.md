@@ -1,0 +1,2 @@
+This is the content of (ikuhlemann.com)[ikuhlemann.com] in HTML, CSS and JavaScript files.  
+I use this repository to work on my homepage from different computers. **It is not documented in a good way for anyone else to understand the code quickly.** If you are, however, interested, feel free to take a look. 
