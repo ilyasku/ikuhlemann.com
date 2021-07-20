@@ -1,103 +1,44 @@
-<!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
+{% extends "base.html" %}
 
-Name       : Skeleton 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20130902
+{% block content %}
 
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-<link href="../default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="../fonts.css" rel="stylesheet" type="text/css" media="all" />
 
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-
-</head>
-<body>
-<div id="page" class="container">
-  <div id="header">
-    <div id="logo">
-      <!--img class="circ" src="../images/ichhabnixgemacht.png" alt="" width="200" height="200" /-->
-      <img class="circ" src="../images/in_genf.JPG" alt="" width="200" height="200" />
-      <h1><a href="#">ikuhlemann</a></h1>
-      <span>HTML/CSS template by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></span>
-    </div>
-    <div id="menu">
-      <ul>
-	<li class="major hvr-reveal"><a href="../index.html" accesskey="1" title="">Me</a></li>
-	<li class="major hvr-reveal"><a href="../cv.html" accesskey="2" title="">CV</a></li>
-	<li class="current_page_item_super major hvr-reveal"><a href="projects.html" accesskey="2" title="">Projects</a></li>
-	<li class="minor_current hvr-sweep-to-right"><a href="compoundpye.html" accesskey="3" title="">CompoundPye</a></li>
-	<li class="minor hvr-reveal"><a href="runbot.html" accesskey="4" title="">RunBot</a></li>
-	<li class="minor hvr-reveal"><a href="this.html" accesskey="5" title="">This</a></li>
-	<!--<li><a href="#" accesskey="2" title="">Our Clients</a></li>
-	    <li><a href="#" accesskey="3" title="">About Us</a></li>
-	<li><a href="#" accesskey="4" title="">Careers</a></li>
-	<li><a href="#" accesskey="5" title="">Contact Us</a></li>-->
-      </ul>
-    </div>
-    <a href="https://uberspace.de" target="_blank"><img id="ubernaut" src="../images/ubernaut.png"></a>
-  </div>
-  <div id="main">
-    <div id="banner">
-      <!--img src="images/pic01.jpg" alt="" class="image-full" /-->
-    </div>
-    <div id="welcome">
-      <div class="title">
-	<h2>CompoundPye</h2>
-	For my master's thesis at <a href="http://www.cellneuro.uni-goettingen.de/BartGeurten.php">Bart Geurten's</a> motion vision group, I developed a Python module designed to simulate neural circuits that are structured in a columnar fashion, as in insects' compound eyes.
-	<br>
-	The most prominent model explaining responses of motion sensitive neurons in insects is the Hassenstein-Reichardt detector <a href="http://www.degruyter.com/view/j/znb.1956.11.issue-9-10/znb-1956-9-1004/znb-1956-9-1004.xml">[1]</a>. It correlates delayed and non-delayed signals of neighbouring photoreceptors in a symmetrical fashion, enabling them to compute the direction of objects passing both photoreceptors. A commonly used simplified Hassenstein-Reichardt detector looks like this: 
-	<div class="figure">
-	  <div id="HRAnimation" class="image-left">
-	    <img id="HR" src="../images/HRDAnimation.png" loop="1" />
-	  </div>
-	  <div class="caption">
-	    The figure on the left shows a single Hassenstein-Reichardt detector unit, for which 2 neighbouring photoreceptors (open half-circles at the top) are necessary. Each photoreceptor sends its output along 2 pathways, one delayed by a time-constant $\tau$, one non-delayed. If two signals coincide at the correlation or multiplication stage <b>M</b>, it responds with a non-zero output. For a solitary input its response remains zero. At the output stage inputs arriving from the left <b>M</b> are added, while inputs arriving from the right <b>M</b> are subtracted. Hence, motion into one direction leads to positive output and motion in the opposite direction leads to negative output. 
-	    <div id="animationDescription">
-	      Press button to start animation.
-	    </div>
-	    <div id="buttonBox">
-	      <!--a href="" onclick="changeIt()"><img id="buttonPrev" src='../images/icons/previous.png' name='PlayOrPause' border='0' width="12%" height="100%" class="noOption" /></a>
-<a href="" onclick="changeIt()"><img id="buttonRep" src='../images/icons/repeat.png' name='PlayOrPause' border='0' width="12%" height="100%" class="noOption" /></a>
-<a href="" onclick="changeIt()"><img id="buttonNext" src='../images/icons/next.png' name='PlayOrPause' border='0' width="12%" height="100%"  /></a-->
-	      <input onclick="changeIt(-1)" type="image" id="buttonPrev" src='../images/icons/previous.png' class="noOption" />
-	      <input onclick="changeIt(0)" type="image" id="buttonRep" src='../images/icons/repeat.png' class="noOption" />
-	      <input onclick="changeIt(1)" type="image" id="buttonNext" src='../images/icons/next.png' class="" />
-	    </div>
-	  </div>
-	  
-	</div>
-	
-	Insects have to have a neural representation of a Hassenstein-Reichardt detector-like circuit in the layers following the photoreceptors. 
-	While some neurons in these layers are known to be part of the motion detection circuit, many neurons' roles are unknown. To investigate neurons connecting to the neurons known to be part of the motion detection circuit, I developed the module <b>CompoundPye</b>. 
-	<br> The general framework (excluding any parameters of the model of the circuit) are hosted on <a>github</a>, and can also be downloaded from <a>PyPI</a>, e.g. using <a>pip</a>. I focused on usability (GUI) and documentation of the code; I think it could be a useful tool for anyone in insect motion vision without enough time or knowledge on computational neuroscience to set up simulations on his own.
-	<br> In contrast to the Hassenstein-Reichardt detector, the model I created for my thesis respects actual neural features way more, it does not rely on unphysiological properties like mathematical multiplication and instantaneous signal transduction. First results regarding motion detection look at least as promising as those obtained with a Hassenstein-Reichardt detector. In addition, not using explicit multiplication helps replicating response properties better for some cells.
+<div id="welcome">
+  <div class="title">
+    <h2>CompoundPye</h2>
+    For my master's thesis at <a href="http://www.cellneuro.uni-goettingen.de/BartGeurten.php">Bart Geurten's</a> motion vision group, I developed a Python module designed to simulate neural circuits that are structured in a columnar fashion, as in insects' compound eyes.
+    <br>
+    The most prominent model explaining responses of motion sensitive neurons in insects is the Hassenstein-Reichardt detector <a href="http://www.degruyter.com/view/j/znb.1956.11.issue-9-10/znb-1956-9-1004/znb-1956-9-1004.xml">[1]</a>. It correlates delayed and non-delayed signals of neighbouring photoreceptors in a symmetrical fashion, enabling them to compute the direction of objects passing both photoreceptors. A commonly used simplified Hassenstein-Reichardt detector looks like this: 
+    <div class="figure">
+      <div id="HRAnimation" class="image-left">
+	<img id="HR" src="{{ current_page.get_relative_url('static/images/HRDAnimation.png') }}" loop="1" />
       </div>
+      <div class="caption">
+	The figure on the left shows a single Hassenstein-Reichardt detector unit, for which 2 neighbouring photoreceptors (open half-circles at the top) are necessary. Each photoreceptor sends its output along 2 pathways, one delayed by a time-constant $\tau$, one non-delayed. If two signals coincide at the correlation or multiplication stage <b>M</b>, it responds with a non-zero output. For a solitary input its response remains zero. At the output stage inputs arriving from the left <b>M</b> are added, while inputs arriving from the right <b>M</b> are subtracted. Hence, motion into one direction leads to positive output and motion in the opposite direction leads to negative output. 
+	<div id="animationDescription">
+	  Press button to start animation.
+	</div>
+	<div id="buttonBox">
+	  <!--a href="" onclick="changeIt()"><img id="buttonPrev" src='../images/icons/previous.png' name='PlayOrPause' border='0' width="12%" height="100%" class="noOption" /></a>
+	       <a href="" onclick="changeIt()"><img id="buttonRep" src='../images/icons/repeat.png' name='PlayOrPause' border='0' width="12%" height="100%" class="noOption" /></a>
+	       <a href="" onclick="changeIt()"><img id="buttonNext" src='../images/icons/next.png' name='PlayOrPause' border='0' width="12%" height="100%"  /></a-->
+	  <input onclick="changeIt(-1)" type="image"
+		 id="buttonPrev"
+		 src='{{ current_page.get_relative_url("static/images/icons/previous.png") }}' class="noOption" />
+	  <input onclick="changeIt(0)" type="image" id="buttonRep"
+		 src='{{ current_page.get_relative_url("static/images/icons/repeat.png") }}' class="noOption" />
+	  <input onclick="changeIt(1)" type="image" id="buttonNext"
+		 src='{{ current_page.get_relative_url("static/images/icons/next.png") }}' class="" />
+	</div>
+      </div>
+      
     </div>
-    <div id="copyright">
-      <span>&copy; Untitled. All rights reserved.</span>
-      <span>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</span>
-    </div>
+    
+    Insects have to have a neural representation of a Hassenstein-Reichardt detector-like circuit in the layers following the photoreceptors. 
+    While some neurons in these layers are known to be part of the motion detection circuit, many neurons' roles are unknown. To investigate neurons connecting to the neurons known to be part of the motion detection circuit, I developed the module <b>CompoundPye</b>. 
+    <br> The general framework (excluding any parameters of the model of the circuit) are hosted on <a>github</a>, and can also be downloaded from <a>PyPI</a>, e.g. using <a>pip</a>. I focused on usability (GUI) and documentation of the code; I think it could be a useful tool for anyone in insect motion vision without enough time or knowledge on computational neuroscience to set up simulations on his own.
+    <br> In contrast to the Hassenstein-Reichardt detector, the model I created for my thesis respects actual neural features way more, it does not rely on unphysiological properties like mathematical multiplication and instantaneous signal transduction. First results regarding motion detection look at least as promising as those obtained with a Hassenstein-Reichardt detector. In addition, not using explicit multiplication helps replicating response properties better for some cells.
   </div>
 </div>
 
-<!--script>
-document.getElementById("animationDescription").innerHTML="Hellooou";
-function myFunction() {
-    document.getElementById("animationDescription").innerHTML="Hellooou2";
-}
-</script-->
-<script src="../scripts/playAnimation.js"></script>
-
-</body>
-</html>
+{% endblock %}

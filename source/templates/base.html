@@ -17,8 +17,8 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ default_css }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ fonts_css }}" rel="stylesheet" type="text/css" media="all" />
 
     <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
@@ -28,14 +28,27 @@
       <div id="header">
 	<div id="logo">
 	  <!--img class="circ" src="images/ichhabnixgemacht.png" alt="" width="200" height="200" /-->
-	  <img class="circ" src="images/in_genf.JPG" alt="" width="200" height="200" />
+	  <img class="circ" src="{{ current_page.get_relative_url('static/images/in_genf.JPG') }}" alt="" width="200" height="200" />
 	  <h1><a href="#">ikuhlemann</a></h1>
 	  <span>HTML/CSS template by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></span>
 	</div>
 	<div id="menu">
-	  
+	  <ul>
+	    {% for p in pages %}
+	    {% if p is sameas current_page %}
+	    <li class="current_page_item major hvr-sweep-to-right">
+	      <a href="#" accesskey="1" title="">{{p.title}}</a>
+	    </li>
+	    {% else %}
+	    <li class="major hvr-reveal"><a href="{{ current_page.get_relative_url(p.url) }}" accesskey="2" title="">{{ p.title }}</a></li>
+	    {% endif %}
+	    {% endfor %}}
+	  </ul>
 	</div>
-	<a href="https://uberspace.de" target="_blank"><img id="ubernaut" src="images/ubernaut.png"></a>
+	<a href="https://uberspace.de" target="_blank">
+	  <img id="ubernaut"
+	       src="{{ current_page.get_relative_url('static/images/ubernaut.png') }}">
+	</a>
       </div>
       <div id="main">
 	<div id="banner">

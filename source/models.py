@@ -8,6 +8,11 @@ class Page:
         self.title = title
         self.url = url
         self.render_kwargs = render_kwargs
+
+        self._path_to_root = '/'.join(['..'] * self.url.count('/'))
+
+    def get_relative_url(self, url: str) -> str:
+        return os.path.join(self._path_to_root, url)
         
 
 class Message:

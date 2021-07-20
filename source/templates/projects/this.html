@@ -1,82 +1,20 @@
-<!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
+{% extends "base.html" %}
 
-Name       : Skeleton 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20130902
+{% block content %}
 
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-<link href="../default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="../fonts.css" rel="stylesheet" type="text/css" media="all" />
-
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-
-</head>
-<body>
-<div id="page" class="container">
-  <div id="header">
-    <div id="logo">
-      <!--img class="circ" src="../images/ichhabnixgemacht.png" alt="" width="200" height="200" /-->
-      <img class="circ" src="../images/in_genf.JPG" alt="" width="200" height="200" />
-      <h1><a href="#">ikuhlemann</a></h1>
-      <span>HTML/CSS template by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></span>
-    </div>
-    <div id="menu">
-      <ul>
-	<li class="major hvr-reveal"><a href="../index.html" accesskey="1" title="">Me</a></li>
-	<li class="major hvr-reveal"><a href="../cv.html" accesskey="2" title="">CV</a></li>
-	<li class="current_page_item_super major hvr-reveal"><a href="projects.html" accesskey="2" title="">Projects</a></li>
-	<li class="minor hvr-reveal"><a href="compoundpye.html" accesskey="3" title="">CompoundPye</a></li>
-	<li class="minor hvr-reveal"><a href="runbot.html" accesskey="4" title="">RunBot</a></li>
-	<li class="minor_current hvr-sweep-to-right"><a href="this.html" accesskey="5" title="">This</a></li>
-	<!--<li><a href="#" accesskey="2" title="">Our Clients</a></li>
-	    <li><a href="#" accesskey="3" title="">About Us</a></li>
-	<li><a href="#" accesskey="4" title="">Careers</a></li>
-	<li><a href="#" accesskey="5" title="">Contact Us</a></li>-->
-      </ul>
-    </div>
-    <a href="https://uberspace.de" target="_blank"><img id="ubernaut" src="../images/ubernaut.png"></a>
+<div id="welcome">
+  <div class="title">
+    I want to learn HTML, CSS and JavaScript (and PHP and MySQL in the long run),
+    starting by building this website and hosting it on my own. It seems to be the best way
+    to build interfaces usable with most OS and devices, e.g. if I want to control a Raspberry Pi
+    in a local network. 
+    <br>One related thing that made me happy after learning the very basics of HTML was
+    <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>, which I think I'm
+    going to stick to for future presentations. It should be able to display videos,
+    gifs and whatever you want to show in your presentation on most operating systems and browsers. I hope.
+    <br>
+    <br>But seriously, how could I live without the comfort of hyperlinks so far?
   </div>
-	<div id="main">
-		<div id="banner">
-			<!--img src="images/pic01.jpg" alt="" class="image-full" /-->
-		</div>
-		<div id="welcome">
-			<div class="title">
-			  I want to learn HTML, CSS and JavaScript (and PHP and MySQL in the long run), starting by building this website and hosting it on my own. It seems to be the best way to build interfaces usable with most OS and devices, e.g. if I want to control a Raspberry Pi in a local network. 
-<br>One related thing that made me happy after learning the very basics of HTML was <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>, which I think I'm going to stick to for future presentations. It should be able to display videos, gifs and whatever you want to show in your presentation on most operating systems and browsers. I hope.
-<br>
-<br>But seriously, how could I live without the comfort of hyperlinks so far?
-			</div>
-		</div>
-		<!--div id="featured">
-			<div class="title">
-				<h2>Maecenas lectus sapien</h2>
-				<span class="byline">Integer sit amet aliquet pretium</span>
-			</div>
-			<ul class="style1">
-				<li class="first">
-					<p class="date"><a href="#">Jan<b>05</b></a></p>
-					<h3>Amet sed volutpat mauris</h3>
-					<p><a href="#">Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget, tempus et, tellus. Etiam neque. Vivamus consequat lorem at nisl. Nullam non wisi a sem semper eleifend. Etiam non felis. Donec ut ante.</a></p>
-				</li>
-			</ul>
-		</div-->
-		<div id="copyright">
-			<span>&copy; Untitled. All rights reserved.</span>
-			<span>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</span>
-		</div>
-	</div>
 </div>
-</body>
-</html>
+
+{% endblock %}

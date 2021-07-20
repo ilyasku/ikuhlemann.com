@@ -7,12 +7,24 @@ btnRep=document.getElementById("buttonRep")
 btnNext=document.getElementById("buttonNext")
 
 cases=[
-    ["Press button to start animation.","../images/HRDAnimation.png",["noOption","noOption",""]],
-    ["When the object passes the left photoreceptor, the photoreceptor's response is sent along two pathways.","../images/animation_part_1.gif",["","",""]],
-    ["The signal on the left pathway gets delayed, the other one does not.","../images/animation_part_2.gif",["","",""]],
-    ["The fast signal reaches the right M alone, no output is evoked there and the signal vanishes.","../images/animation_part_3.gif",["","",""]],
-    ["At the left M two signals coincide. They multiply to a larger and, more importantly, non-zero output.","../images/animation_part_4.gif",["","",""]],
-    ["The left M's output reaches the output stage. It's transduced unaltered, since there is no input from the the other M.","../images/animation_part_5.gif",["","","noOption"]],
+    ["Press button to start animation.",
+     "../static/images/HRDAnimation.png",
+     ["noOption","noOption",""]],
+    ["When the object passes the left photoreceptor, the photoreceptor's response is sent along two pathways.",
+     "../static/images/animation_part_1.gif",
+     ["","",""]],
+    ["The signal on the left pathway gets delayed, the other one does not.",
+     "../static/images/animation_part_2.gif",
+     ["","",""]],
+    ["The fast signal reaches the right M alone, no output is evoked there and the signal vanishes.",
+     "../static/images/animation_part_3.gif",
+     ["","",""]],
+    ["At the left M two signals coincide. They multiply to a larger and, more importantly, non-zero output.",
+     "../static/images/animation_part_4.gif",
+     ["","",""]],
+    ["The left M's output reaches the output stage. It's transduced unaltered, since there is no input from the the other M.",
+     "../static/images/animation_part_5.gif",
+     ["","","noOption"]],
 ]
 
 function changeIt(key) {
