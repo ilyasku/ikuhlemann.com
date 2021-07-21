@@ -15,7 +15,6 @@ PAGES = [
     Page('RunBot', 'projects/runbot.html'),
     Page('CompoundPye', 'projects/compoundpye.html',
          scripts=['../static/js/playAnimation.js']),
-    Page('This', 'projects/this.html')
 ]
 
 CSS_FILES = [
