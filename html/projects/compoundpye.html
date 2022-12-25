@@ -1,6 +1,70 @@
-{% extends "base.html" %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+     Design by TEMPLATED
+     http://templated.co
+     Released for free under the Creative Commons Attribution License
 
-{% block content %}
+     Name       : Skeleton 
+     Description: A two-column, fixed-width design with dark color scheme.
+     Version    : 1.0
+     Released   : 20130902
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ikuhlemann</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="../static/css/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+  </head>
+  <body>
+    <div id="page" class="container">
+      <div id="header">
+	<div id="logo">
+	  <!--img class="circ" src="images/ichhabnixgemacht.png" alt="" width="200" height="200" /-->
+	  <img class="circ" src="../static/images/in_genf.JPG" alt="" width="200" height="200" />
+	  <h1><a href="#">ikuhlemann</a></h1>
+	  <span>HTML/CSS template by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></span>
+	</div>
+	<div id="menu">
+	  <ul>
+	    
+	    
+	    <li class="major hvr-reveal"><a href="../index.html" accesskey="2" title="">Home</a></li>
+	    
+	    
+	    
+	    <li class="major hvr-reveal"><a href="../cv.html" accesskey="2" title="">CV</a></li>
+	    
+	    
+	    
+	    <li class="major hvr-reveal"><a href="../projects/runbot.html" accesskey="2" title="">RunBot</a></li>
+	    
+	    
+	    
+	    <li class="current_page_item major hvr-sweep-to-right">
+	      <a href="#" accesskey="1" title="">CompoundPye</a>
+	    </li>
+	    
+	    }
+	  </ul>
+	</div>
+	<a href="https://uberspace.de" target="_blank">
+	  <img id="ubernaut"
+	       src="../static/images/ubernaut.png">
+	</a>
+      </div>
+      <div id="main">
+	<div id="banner">
+	  <!--img src="images/pic01.jpg" alt="" class="image-full" /-->
+	</div>	
+	
 
 
 <div id="welcome">
@@ -11,7 +75,7 @@
     The most prominent model explaining responses of motion sensitive neurons in insects is the Hassenstein-Reichardt detector <a href="http://www.degruyter.com/view/j/znb.1956.11.issue-9-10/znb-1956-9-1004/znb-1956-9-1004.xml">[1]</a>. It correlates delayed and non-delayed signals of neighbouring photoreceptors in a symmetrical fashion, enabling them to compute the direction of objects passing both photoreceptors. A commonly used simplified Hassenstein-Reichardt detector looks like this: 
     <div class="figure">
       <div id="HRAnimation" class="image-left">
-	<img id="HR" src="{{ current_page.get_relative_url('static/images/HRDAnimation.png') }}" loop="1" />
+	<img id="HR" src="../static/images/HRDAnimation.png" loop="1" />
       </div>
       <div class="caption">
 	The figure on the left shows a single Hassenstein-Reichardt detector unit, for which 2 neighbouring photoreceptors (open half-circles at the top) are necessary. Each photoreceptor sends its output along 2 pathways, one delayed by a time-constant $\tau$, one non-delayed. If two signals coincide at the correlation or multiplication stage <b>M</b>, it responds with a non-zero output. For a solitary input its response remains zero. At the output stage inputs arriving from the left <b>M</b> are added, while inputs arriving from the right <b>M</b> are subtracted. Hence, motion into one direction leads to positive output and motion in the opposite direction leads to negative output. 
@@ -21,11 +85,11 @@
 	<div id="buttonBox">
 	  <input onclick="changeIt(-1)" type="image"
 		 id="buttonPrev"
-		 src='{{ current_page.get_relative_url("static/images/icons/previous.png") }}' class="noOption" />
+		 src='../static/images/icons/previous.png' class="noOption" />
 	  <input onclick="changeIt(0)" type="image" id="buttonRep"
-		 src='{{ current_page.get_relative_url("static/images/icons/repeat.png") }}' class="noOption" />
+		 src='../static/images/icons/repeat.png' class="noOption" />
 	  <input onclick="changeIt(1)" type="image" id="buttonNext"
-		 src='{{ current_page.get_relative_url("static/images/icons/next.png") }}' class="" />
+		 src='../static/images/icons/next.png' class="" />
 	</div>
       </div>
       
@@ -51,4 +115,16 @@
   </div>
 </div>
 
-{% endblock %}
+
+	<div id="copyright">
+	  <span>&copy; Untitled. All rights reserved.</span>
+	  <span>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</span>
+	</div>
+      </div>
+	
+	
+	<script src="../static/js/playAnimation.js"></script>
+	
+	
+  </body>
+</html>
